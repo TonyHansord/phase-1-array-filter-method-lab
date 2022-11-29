@@ -6,9 +6,7 @@ const findMatching = (drivers, name) => {
 };
 
 const fuzzyMatch = (drivers, name) =>
-  drivers.filter((driver) =>
-    driver.toLowerCase().startsWith(name.toLowerCase())
-  );
+  drivers.filter((driver) => driver.startsWith(name));
 
 const matchName = (drivers, name) =>
   drivers.filter((driver) => driver.name.toLowerCase() === name.toLowerCase());
